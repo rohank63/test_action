@@ -23,12 +23,11 @@ jobs:
         conda info -a
         conda env create --file environment.yml
         conda env update --file environment-dev.yml
-        mypy a.py
     
     - name: Tests
       run: |
         # style tests
-        # flake8
+        $flake8
         pylint --rcfile pylint.cfg a.py
         mypy a.py
         # unit tests
