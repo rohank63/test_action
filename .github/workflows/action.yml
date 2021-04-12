@@ -24,13 +24,12 @@ jobs:
         conda info -a
         conda env create --file environment.yml
         conda env update --file environment-dev.yml
-        conda info --envs
         conda activate htsinfer
     
     - name: Tests
-      shell: bash
       run: |
         # style tests
         pwd
+        flake8
         mypy a.py
         # unit tests
