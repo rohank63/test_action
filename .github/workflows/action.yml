@@ -27,6 +27,7 @@ jobs:
         conda activate htsinfer
     
     - name: Tests
+      shell: bash
       run: |
         conda info --envs
         conda activate htsinfer
