@@ -3,7 +3,7 @@ name: HTSINFER
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: ubuntu-latest
     strategy:
@@ -21,3 +21,4 @@ jobs:
         conda update -q conda
         conda info -a
         conda env create --file environment.yml
+        conda env update --file environment-dev.yml
