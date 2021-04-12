@@ -26,11 +26,11 @@ jobs:
         conda env update --file environment-dev.yml
         conda activate htsinfer
         conda info --envs
+        flake8
         mypy a.py
+        pylint --rcfile pylint.cfg a.py
     
     - name: Tests
       shell: bash
       run: |
-        conda info --envs
-        conda activate htsinfer
         conda info --envs
