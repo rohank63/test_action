@@ -26,6 +26,7 @@ jobs:
         conda env update --file environment-dev.yml
         conda activate htsinfer
         conda info --envs
+        mypy a.py
     
     - name: Tests
       shell: bash
