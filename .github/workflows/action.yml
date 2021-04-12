@@ -11,6 +11,7 @@ jobs:
         python-version: [3.6, 3.7, 3.8, 3.9]
     steps:
     - uses: actions/checkout@v2
+
     - name: Install
       run: |
         wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
@@ -22,3 +23,11 @@ jobs:
         conda info -a
         conda env create --file environment.yml
         conda env update --file environment-dev.yml
+    
+    - name: Script
+      run: |
+        # style tests
+        - flake8
+        - pylint --rcfile pylint.cfg a.py
+        - mypy a.py
+        # unit tests
