@@ -26,8 +26,6 @@ jobs:
     
     - name: Script
       run: |
-        # style tests
         - flake8
         - pylint --rcfile pylint.cfg a.py
         - mypy a.py
-        # unit tests
