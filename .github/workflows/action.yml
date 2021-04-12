@@ -24,8 +24,10 @@ jobs:
         conda env create --file environment.yml
         conda env update --file environment-dev.yml
     
-    - name: Script
+    - name: Tests
       run: |
-        - flake8
-        - pylint --rcfile pylint.cfg a.py
-        - mypy a.py
+        # style tests
+        flake8
+        pylint --rcfile pylint.cfg a.py
+        mypy a.py
+        # unit tests
