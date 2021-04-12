@@ -28,6 +28,6 @@ jobs:
       run: |
         # style tests
         $flake8
-        pylint --rcfile pylint.cfg a.py
-        mypy a.py
+        $pylint --rcfile pylint.cfg a.py
+        $mypy a.py
         # unit tests
