@@ -35,4 +35,5 @@ jobs:
       run: |
         conda info --envs
         conda init bash
+        exec bash
         conda activate htsinfer
