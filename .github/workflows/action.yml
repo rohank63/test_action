@@ -27,5 +27,4 @@ jobs:
         conda activate htsinfer
     
     - name: Tests
-      shell: /usr/bin/env htsinfer
-      run: mypy a.py
+      run: conda info --envs
