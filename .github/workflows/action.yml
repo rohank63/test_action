@@ -27,9 +27,8 @@ jobs:
     
     - name: Tests
       shell: bash
-      run: >
+      run: |
         # style tests
-        flake8
-        pylint --rcfile pylint.cfg a.py
+        pwd
         mypy a.py
         # unit tests
