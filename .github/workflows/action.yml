@@ -30,6 +30,6 @@ jobs:
       run: |
         # style tests
         pwd
-        flake8
-        mypy a.py
+        $flake8
+        $mypy a.py
         # unit tests
