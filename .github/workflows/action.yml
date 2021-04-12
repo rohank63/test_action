@@ -34,3 +34,4 @@ jobs:
       shell: bash
       run: |
         conda info --envs
+        conda init bash
